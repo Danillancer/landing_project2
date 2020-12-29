@@ -1,0 +1,83 @@
+/* Слайдер */
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+   overflow: hidden;
+}
+.profile__photo .slick-list.draggable {
+}
+/* Лента слайдов */
+.slick-track {
+   display: flex;
+}
+/* Слайд */
+.profile__photo .slick-slide {
+   opacity: 0.2;
+}
+.profile__img .slick-slide img {
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.profile__photo .slick-slide.slick-center {
+   opacity: 1;
+   border-radius: 6%;
+}
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+
+.profile__photo {
+   position: relative;
+}
+.slick-arrow {
+   position: absolute;
+   top: 50%;
+   z-index: 10;
+   font-size: 0;
+   width: 30px;
+   height: 50px;
+   transform: translateY(-50%);
+}
+/* Стрелка влево */
+.profile__photo .slick-arrow.slick-prev {
+   left: 10%;
+   background: url("../img/ArrowL.png") 0 0 no-repeat;
+}
+/* Стрелка вправо */
+.profile__photo .slick-arrow.slick-next {
+   right: 10%;
+   background: url("../img/ArrowR.png") 0 0 no-repeat;
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+/* Точки (булиты) */
+.slick-dots {
+}
+.slick-dots li {
+}
+/* Активная точка */
+.slick-dots li.slick-active {
+}
+/* Элемент точки */
+.slick-dots li button {
+}
+
+.slider__slide {
+   text-align: center;
+}

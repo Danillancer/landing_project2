@@ -129,7 +129,7 @@
 }
 
 .main {
-   background: url("/img/main_bg.png") center/cover no-repeat;
+   background: url("../img/main_bg.png") center/cover no-repeat;
    margin-top: calc(20px + (116 - 20) * ((100vw - 320px) / (1600 - 320)));
 
    &__title {

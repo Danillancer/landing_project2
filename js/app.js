@@ -9,7 +9,8 @@ ibg();
 $('.wrapper').addClass('loaded');
 $('.header__burger').click(function (event) {
    $(this).toggleClass('active');
-   $('.nav__1').toggleClass('active')
+   $('.header__list').toggleClass('active')
+   $('.nav__1').toggleClass('active');
    $('body').toggleClass('lock')
 });
 $(document).ready(function () {
@@ -49,4 +50,12 @@ $(document).ready(function () {
    });
 });
 
-const isChecked = !!$('[type="radio"]:checked').length;
+$(document).ready(function () {
+   $("#menu").on("click", "a", function (event) {
+      event.preventDefault();
+      var id = $(this).attr('href'),
+         top = $(id).offset().top;
+      $('body,html').animate({ scrollTop: top }, 1500);
+   });
+});
+

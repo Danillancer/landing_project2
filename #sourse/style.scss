@@ -26,10 +26,10 @@
    height: 42px;
 
    &__burger {
-      display: block;
-      position: absolute;
-      top: 15px;
-      left: 0;
+      display: none;
+      position: fixed;
+      top: 58px;
+      left: 20%;
       width: 20px;
       height: 12px;
       cursor: pointer;
@@ -82,10 +82,6 @@
    }
    &__link {
       margin-right: 40px;
-
-      &:first-child {
-         margin-left: 42px;
-      }
       &_2 {
          margin-left: 30px;
          &:last-child {
@@ -94,6 +90,9 @@
       }
    }
 
+   &__logo {
+      z-index: 2;
+   }
    &__get {
       position: absolute;
       top: 0;
@@ -103,23 +102,50 @@
 @media (max-width: 1023px) {
    .header {
       justify-content: center;
-
-      &__nav {
-         display: none;
-      }
-      &__list {
-         position: absolute;
+      &__burger {
          display: block;
       }
+      &__nav {
+      }
+      &__list {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+      }
+      &__list.active {
+      }
       &__link {
+         padding: 20px 0;
          margin: 0;
       }
+      &__link a {
+         margin: 0;
+         font-size: 30px;
+         color: #fff;
+      }
+   }
+   .nav__1:target {
+      transform: translateY(-100%);
    }
    .nav__1 {
-      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: auto;
+      background-color: #6fc754;
+      padding-top: 150px;
+      transform: translateY(-100%);
+      transition-duration: 1s;
+      z-index: 1;
    }
    .nav__1.active {
-      display: block;
+      transform: translateY(0%);
+   }
+   .nav__2 {
+      display: none;
    }
 }
 @media (max-width: 767px) {
@@ -381,6 +407,9 @@
 
    &__container {
       margin-top: 130px;
+   }
+   @media (max-width: 425px) {
+      display: none;
    }
 }
 
